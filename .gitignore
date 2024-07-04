@@ -1,24 +1,85 @@
-# Logs
-logs
-*.log
+# Node modules
+node_modules/
+
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
 dist
-dist-ssr
-*.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Gatsby files
+.cache/
+public/
+
+# Gridsome build files
+dist/
+
+# Vuepress build output
+.vuepress/dist
+
+# Storybook build outputs
+out/
+.storybook-out/
+
+# Compiled directory
+lib/
+
+# Static directories
+out/
+build/
+
+# Cache directories
+.cache/
+.cache-loader/
+
+# Webpack cache directory
+.cache/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Temporary folders and files
+tmp/
+temp/
+*.swp
+*.log
+
+# IntelliJ IDEA
+.idea/
+
+# VS Code
+.vscode/
+
+# MacOS
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# Linux
+*~
