@@ -1,3 +1,6 @@
+import { useAppSelector } from "../hook/store";
+import { useUserActions } from "../hook/useUserActions";
+
 // 'use client';
 import {
 	Badge,
@@ -10,9 +13,10 @@ import {
 	TableRow,
 	Title,
 } from "@tremor/react";
-import { useSelector } from "react-redux";
+
 export function ListOfUsers() {
-	const users = useSelector((state) => state.users);
+	const users = useAppSelector((state) => state.users);
+	const { removeUser } = useUserActions();
 
 	return (
 		<Card>
@@ -49,7 +53,9 @@ export function ListOfUsers() {
 							<TableCell>{item.email}</TableCell>
 							<TableCell>
 								<button type="button">
+									{/* rome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
 									<svg
+										aria-label=""
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
@@ -64,8 +70,10 @@ export function ListOfUsers() {
 										/>
 									</svg>
 								</button>
-								<button type="button">
+								<button type="button" onClick={() => removeUser(item.id)}>
+									{/* rome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
 									<svg
+										aria-label="Remove Element"
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
